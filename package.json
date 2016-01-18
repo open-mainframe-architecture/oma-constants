@@ -1,0 +1,22 @@
+{
+  "name": "oma-constants",
+  "description": "Constant file and directory names in reference implementation of oma.",
+  "main": "index",
+  "version": "1.0.0",
+  "keywords": [
+    "oma",
+    "open mainframe architecture",
+    "constants",
+    "file names",
+    "directory names"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-mainframe-architecture/oma-constants.git"
+  },
+  "author": "open.mainframe@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/open-mainframe-architecture/oma-constants/issues"
+  }
+}
