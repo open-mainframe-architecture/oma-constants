@@ -1,32 +1,39 @@
 "use strict";
 
 module.exports = {
-  // asset categories are comma-separated lists with file extensions
   category: {
+    // asset categories are comma-separated lists with file extensions
     audio: 'mp3',
     gfx: 'png,jpg,gif'
   },
-  // directories of library service
   library: {
+    // directories of library service
     archives: 'src',
     bundles: 'pub'
   },
-  // location of configuration files in an archive
   archive: {
+    // location of configuration files in an archive
     topConfig: '[A-Z]+([0-9A-Za-z])+(.[A-Z]+([0-9A-Za-z]))/config.js',
     subConfig: 'sub/[A-Z]+([0-9A-Za-z])/config.js',
     bundleScripts: {
       home: 'publish',
       base: '+([A-Za-z])+(-+([A-Za-z]))',
       category: 'js'
+    },
+    // file name of versioned archive
+    version: '+([0-9]).+([0-9]).+([0-9])',
+    // regular expressions for archive versions
+    pattern: {
+      name: /^[A-Za-z]+(?:-[A-Za-z]+)+$/,
+      version: /^\d+\.\d+\.\d+$/
     }
   },
-  // a bundle has a loader
   bundle: {
+    // a bundle has a loader
     loader: 'bundle'
   },
-  // file locations in source tree of a module
   module: {
+    // file locations in source tree of a module
     bootScript: 'boot.js',
     configScript: 'config.js',
     configScripts: {
@@ -44,12 +51,13 @@ module.exports = {
       category: 'audio,gfx,js'
     }
   },
-  // configure tools for oma
   tool: {
+    // 'datafy' small assets in data URIs
     datafy: {
       category: 'audio,gfx',
       limit: 8192
     },
+    // lint for JavaScript
     jshint: {
       camelcase: true,
       curly: true,
@@ -57,7 +65,7 @@ module.exports = {
       funcscope: false,
       immed: true,
       indent: 2,
-      latedef: 'nofunc',
+      latedef: false,
       maxdepth: 4,
       maxlen: 100,
       noarg: true,
