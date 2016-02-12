@@ -8,10 +8,11 @@ module.exports = {
   },
   library: {
     // directories of library service
-    archives: 'src',
-    bundles: 'pub'
+    preserve: 'src',
+    publish: 'pub'
   },
   archive: {
+    file: 'archive',
     // location of configuration files in an archive
     topConfig: '[A-Z]+([0-9A-Za-z])+(.[A-Z]+([0-9A-Za-z]))/config.js',
     subConfig: 'sub/[A-Z]+([0-9A-Za-z])/config.js',
@@ -20,7 +21,7 @@ module.exports = {
       base: '+([A-Za-z])+(-+([A-Za-z]))',
       category: 'js'
     },
-    // file name of versioned archive
+    // directory name of versioned archive
     version: '+([0-9]).+([0-9]).+([0-9])',
     // regular expressions for archive versions
     pattern: {
@@ -29,8 +30,7 @@ module.exports = {
     }
   },
   bundle: {
-    // a bundle has a loader
-    loader: 'bundle'
+    file: 'bundle'
   },
   module: {
     // file locations in source tree of a module
