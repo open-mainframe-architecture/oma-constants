@@ -62,6 +62,7 @@ module.exports = {
       camelcase: true,
       curly: true,
       eqeqeq: true,
+      esversion: 6,
       funcscope: false,
       immed: true,
       indent: 2,

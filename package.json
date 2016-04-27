@@ -2,7 +2,7 @@
   "name": "oma-constants",
   "description": "Constant file and directory names in reference implementation of oma.",
   "main": "index",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "keywords": [
     "oma",
     "open mainframe architecture",
